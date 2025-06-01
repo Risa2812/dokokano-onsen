@@ -379,7 +379,6 @@ img {
  margin: 25px 10px;
  }
 
-
 .slidemenu {
   display: flex;
   position: relative;
@@ -387,8 +386,8 @@ img {
 
 .marquee-m {
   display: flex;
-  animation: marquee 20s linear infinite;
-  overflow: hidden;
+  width: max-content;
+  animation: marquee 40s linear infinite;
 }
 
 @keyframes marquee {
@@ -397,7 +396,7 @@ img {
   }
 
   100% {
-    translate: -70%;
+    translate: -100%;
   }
 
 }
@@ -405,7 +404,7 @@ img {
 /*画像にホバーすると動きを止めて拡大*/
 
 .marquee-m img {
-  max-width: 150px;
+  max-width: 200px;
   transition: scale .4s;
 
 }
@@ -593,6 +592,9 @@ a.btn-g p::after {
     text-align: center;
     margin-bottom: 2rem;
   }
+  .marquee-m .deli{
+    display: none;
+  }
 
   .marquee-m {
     animation: none;
@@ -602,13 +604,12 @@ a.btn-g p::after {
   }
 
   .marquee-m img {
-    width: 65%;
-    /* 2枚並ぶように調整 */
+    width: 75%;
     height: auto;
     object-fit: cover;
   }
 
-  .marquee-m img:nth-child(n+9) {
+  .marquee-m img:nth-child(n+4) {
     display: none;
 
   }

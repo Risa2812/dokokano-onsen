@@ -38,19 +38,21 @@ const marqueeInners = document.querySelectorAll('.marquee-m');
 // 各画像にホバーイベントを追加
 images.forEach(img => {
   img.addEventListener('mouseenter', () => {
-    // すべての .marquee-inner-stop のアニメーションを停止
+    // すべての .marquee-m のアニメーションを停止
     marqueeInners.forEach(marqueeInner => {
       marqueeInner.classList.add('marquee-paused');
     });
   });
 
   img.addEventListener('mouseleave', () => {
-    // すべての .marquee-inner-stop のアニメーションを再開
+    // すべての .marquee-m のアニメーションを再開
     marqueeInners.forEach(marqueeInner => {
       marqueeInner.classList.remove('marquee-paused');
     });
   });
 });
+const marquee = document.querySelector('.marquee-m');
+marquee.innerHTML += marquee.innerHTML; // 画像を複製
 
 //ハンバーガー開閉
 const hamburger = document.getElementById('hamburger');
